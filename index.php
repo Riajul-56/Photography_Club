@@ -4,7 +4,7 @@
     <div class="hero-content">
         <h2>Capture the Moment</h2>
         <p>Join our community of passionate photographers</p>
-        <a href="/register.php" class="btn">Join Now</a>
+        <a href="register.php" class="btn">Join Now</a>
     </div>
 </section>
 
@@ -16,7 +16,7 @@
         $stmt = $pdo->query("SELECT * FROM photos ORDER BY upload_date DESC LIMIT 6");
         while ($photo = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo '<div class="photo-item">';
-            echo '<img src="/uploads/' . htmlspecialchars($photo['file_path']) . '" alt="' . htmlspecialchars($photo['title']) . '">';
+            echo '<img src="uploads/' . htmlspecialchars($photo['file_path']) . '" alt="' . htmlspecialchars($photo['title']) . '">';
             echo '<div class="photo-info">';
             echo '<h3>' . htmlspecialchars($photo['title']) . '</h3>';
             echo '</div>';
@@ -36,7 +36,7 @@
             echo '<h3>' . htmlspecialchars($event['title']) . '</h3>';
             echo '<p class="event-date">' . date('F j, Y', strtotime($event['event_date'])) . '</p>';
             echo '<p class="event-location">' . htmlspecialchars($event['location']) . '</p>';
-            echo '<a href="/event.php?id=' . $event['event_id'] . '" class="btn">Details</a>';
+            echo '<a href="event.php?id=' . $event['event_id'] . '" class="btn">Details</a>';
             echo '</div>';
         }
         ?>

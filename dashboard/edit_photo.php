@@ -1,9 +1,9 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/header.php';
+require_once '..includes/db.php';
+require_once '..includes/header.php';
 
 if (!isset($_SESSION['member_id']) || !isset($_GET['id'])) {
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -15,7 +15,7 @@ $stmt->execute([$photo_id, $_SESSION['member_id']]);
 $photo = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$photo) {
-    header('Location: /dashboard/');
+    header('Location: dashboard/');
     exit;
 }
 

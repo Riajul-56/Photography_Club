@@ -43,12 +43,12 @@ $past_events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php if ($is_registered): ?>
                                     <span class="btn btn-disabled">Already Registered</span>
                                 <?php else: ?>
-                                    <a href="/register_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn">Register</a>
+                                    <a href="register_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn">Register</a>
                                 <?php endif; ?>
                             <?php else: ?>
-                                <a href="/login.php" class="btn">Login to Register</a>
+                                <a href="login.php" class="btn">Login to Register</a>
                             <?php endif; ?>
-                            <a href="/event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">Details</a>
+                            <a href="event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">Details</a>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ require_once 'includes/db.php';
 require_once 'includes/header.php';
 
 if (!isset($_GET['id'])) {
-    header('Location: /gallery.php');
+    header('Location: gallery.php');
     exit;
 }
 
@@ -15,7 +15,7 @@ $stmt->execute([$photo_id]);
 $photo = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$photo) {
-    header('Location: /gallery.php');
+    header('Location: gallery.php');
     exit;
 }
 
@@ -27,13 +27,13 @@ $related_photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <section class="photo-detail">
     <div class="photo-container">
-        <img src="/uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
+        <img src="uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
     </div>
     
     <div class="photo-info">
         <h2><?php echo htmlspecialchars($photo['title']); ?></h2>
         <p class="photo-meta">
-            By <a href="/member.php?id=<?php echo $photo['member_id']; ?>"><?php echo htmlspecialchars($photo['full_name']); ?></a> 
+            By <a href="member.php?id=<?php echo $photo['member_id']; ?>"><?php echo htmlspecialchars($photo['full_name']); ?></a> 
             on <?php echo date('F j, Y', strtotime($photo['upload_date'])); ?>
             in <?php echo ucfirst(htmlspecialchars($photo['category'])); ?>
         </p>
@@ -46,8 +46,8 @@ $related_photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         <?php if (isset($_SESSION['member_id']) && $_SESSION['member_id'] == $photo['member_id']): ?>
             <div class="photo-actions">
-                <a href="/dashboard/edit_photo.php?id=<?php echo $photo_id; ?>" class="btn">Edit</a>
-                <a href="/dashboard/delete_photo.php?id=<?php echo $photo_id; ?>" class="btn btn-outline">Delete</a>
+                <a href="dashboard/edit_photo.php?id=<?php echo $photo_id; ?>" class="btn">Edit</a>
+                <a href="dashboard/delete_photo.php?id=<?php echo $photo_id; ?>" class="btn btn-outline">Delete</a>
             </div>
         <?php endif; ?>
     </div>
@@ -58,8 +58,8 @@ $related_photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="photo-grid">
                 <?php foreach ($related_photos as $related): ?>
                     <div class="photo-item">
-                        <a href="/photo.php?id=<?php echo $related['photo_id']; ?>">
-                            <img src="/uploads/<?php echo htmlspecialchars($related['file_path']); ?>" alt="<?php echo htmlspecialchars($related['title']); ?>">
+                        <a href="photo.php?id=<?php echo $related['photo_id']; ?>">
+                            <img src="uploads/<?php echo htmlspecialchars($related['file_path']); ?>" alt="<?php echo htmlspecialchars($related['title']); ?>">
                         </a>
                     </div>
                 <?php endforeach; ?>

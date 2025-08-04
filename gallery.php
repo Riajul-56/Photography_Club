@@ -27,7 +27,7 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <section class="gallery-header">
     <h2>Photo Gallery</h2>
     
-    <form action="/gallery.php" method="GET" class="search-form">
+    <form action="gallery.php" method="GET" class="search-form">
         <div class="form-group">
             <input type="text" name="search" placeholder="Search photos..." value="<?php echo htmlspecialchars($search); ?>">
             <button type="submit"><i class="fas fa-search"></i></button>
@@ -35,13 +35,13 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
     
     <div class="category-filter">
-        <a href="/gallery.php" class="<?php echo $category === 'all' ? 'active' : ''; ?>">All</a>
-        <a href="/gallery.php?category=nature" class="<?php echo $category === 'nature' ? 'active' : ''; ?>">Nature</a>
-        <a href="/gallery.php?category=portrait" class="<?php echo $category === 'portrait' ? 'active' : ''; ?>">Portrait</a>
-        <a href="/gallery.php?category=street" class="<?php echo $category === 'street' ? 'active' : ''; ?>">Street</a>
-        <a href="/gallery.php?category=wildlife" class="<?php echo $category === 'wildlife' ? 'active' : ''; ?>">Wildlife</a>
-        <a href="/gallery.php?category=macro" class="<?php echo $category === 'macro' ? 'active' : ''; ?>">Macro</a>
-        <a href="/gallery.php?category=landscape" class="<?php echo $category === 'landscape' ? 'active' : ''; ?>">Landscape</a>
+        <a href="gallery.php" class="<?php echo $category === 'all' ? 'active' : ''; ?>">All</a>
+        <a href="gallery.php?category=nature" class="<?php echo $category === 'nature' ? 'active' : ''; ?>">Nature</a>
+        <a href="gallery.php?category=portrait" class="<?php echo $category === 'portrait' ? 'active' : ''; ?>">Portrait</a>
+        <a href="gallery.php?category=street" class="<?php echo $category === 'street' ? 'active' : ''; ?>">Street</a>
+        <a href="gallery.php?category=wildlife" class="<?php echo $category === 'wildlife' ? 'active' : ''; ?>">Wildlife</a>
+        <a href="gallery.php?category=macro" class="<?php echo $category === 'macro' ? 'active' : ''; ?>">Macro</a>
+        <a href="gallery.php?category=landscape" class="<?php echo $category === 'landscape' ? 'active' : ''; ?>">Landscape</a>
     </div>
 </section>
 
@@ -52,8 +52,8 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="masonry-grid">
             <?php foreach ($photos as $photo): ?>
                 <div class="photo-card">
-                    <a href="/photo.php?id=<?php echo $photo['photo_id']; ?>">
-                        <img src="/uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
+                    <a href="photo.php?id=<?php echo $photo['photo_id']; ?>">
+                        <img src="uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
                     </a>
                     <div class="photo-details">
                         <h3><?php echo htmlspecialchars($photo['title']); ?></h3>

@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
     
-    <form action="/login.php" method="POST">
+    <form action="login.php" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn">Login</button>
     </form>
     
-    <p>Don't have an account? <a href="/register.php">Register here</a></p>
+    <p>Don't have an account? <a href="register.php">Register here</a></p>
 </section>
 
 <?php require_once 'includes/footer.php'; ?>

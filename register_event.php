@@ -3,12 +3,12 @@ require_once 'includes/db.php';
 require_once 'includes/header.php';
 
 if (!isset($_SESSION['member_id'])) {
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
 if (!isset($_GET['event_id'])) {
-    header('Location: /events.php');
+    header('Location: events.php');
     exit;
 }
 

@@ -56,7 +56,7 @@ if (isset($_SESSION['member_id'])) {
                 <?php endif; ?>
                 
                 <?php if ($_SESSION['member_id'] == $event['organizer_id']): ?>
-                    <a href="/dashboard/edit_event.php?id=<?php echo $event_id; ?>" class="btn btn-outline">Edit Event</a>
+                    <a href="dashboard/edit_event.php?id=<?php echo $event_id; ?>" class="btn btn-outline">Edit Event</a>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
@@ -72,8 +72,8 @@ if (isset($_SESSION['member_id'])) {
         <?php if (!empty($participants)): ?>
             <div class="participants-grid">
                 <?php foreach ($participants as $participant): ?>
-                    <a href="/member.php?id=<?php echo $participant['member_id']; ?>" class="participant">
-                        <img src="/uploads/profiles/<?php echo htmlspecialchars($participant['profile_pic']); ?>" alt="<?php echo htmlspecialchars($participant['full_name']); ?>">
+                    <a href="member.php?id=<?php echo $participant['member_id']; ?>" class="participant">
+                        <img src="uploads/profiles/<?php echo htmlspecialchars($participant['profile_pic']); ?>" alt="<?php echo htmlspecialchars($participant['full_name']); ?>">
                         <span><?php echo htmlspecialchars($participant['full_name']); ?></span>
                     </a>
                 <?php endforeach; ?>
@@ -89,8 +89,8 @@ if (isset($_SESSION['member_id'])) {
             <div class="photo-grid">
                 <?php foreach ($photos as $photo): ?>
                     <div class="photo-item">
-                        <a href="/photo.php?id=<?php echo $photo['photo_id']; ?>">
-                            <img src="/uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
+                        <a href="photo.php?id=<?php echo $photo['photo_id']; ?>">
+                            <img src="uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
                         </a>
                         <div class="photo-info">
                             <h4><?php echo htmlspecialchars($photo['title']); ?></h4>

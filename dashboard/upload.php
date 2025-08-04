@@ -1,9 +1,9 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/header.php';
+require_once '..includes/db.php';
+require_once '..includes/header.php';
 
 if (!isset($_SESSION['member_id'])) {
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         if (empty($errors)) {
-            $upload_dir = '../uploads/';
+            $upload_dir = '..uploads/';
             if (!is_dir($upload_dir)) {
                 mkdir($upload_dir, 0755, true);
             }
@@ -68,17 +68,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="dashboard">
     <aside class="sidebar">
         <div class="profile-summary">
-            <img src="/uploads/profiles/<?php echo htmlspecialchars($_SESSION['profile_pic'] ?? 'default.jpg'); ?>" alt="Profile Picture">
+            <img src="uploads/profiles/<?php echo htmlspecialchars($_SESSION['profile_pic'] ?? 'default.jpg'); ?>" alt="Profile Picture">
             <h3><?php echo htmlspecialchars($_SESSION['full_name']); ?></h3>
             <p>@<?php echo htmlspecialchars($_SESSION['username']); ?></p>
         </div>
         
         <nav class="dashboard-nav">
             <ul>
-                <li><a href="/dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                <li class="active"><a href="/dashboard/upload.php"><i class="fas fa-upload"></i> Upload Photo</a></li>
-                <li><a href="/dashboard/profile.php"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="active"><a href="dashboard/upload.php"><i class="fas fa-upload"></i> Upload Photo</a></li>
+                <li><a href="dashboard/profile.php"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </nav>
     </aside>
@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
         
-        <form action="/dashboard/upload.php" method="POST" enctype="multipart/form-data">
+        <form action="dashboard/upload.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" required>

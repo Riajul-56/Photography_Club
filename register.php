@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
     
-    <form action="/register.php" method="POST">
+    <form action="register.php" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn">Register</button>
     </form>
     
-    <p>Already have an account? <a href="/login.php">Login here</a></p>
+    <p>Already have an account? <a href="login.php">Login here</a></p>
 </section>
 
 <?php require_once 'includes/footer.php'; ?>

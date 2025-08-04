@@ -13,8 +13,8 @@ $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="members-grid">
         <?php foreach ($members as $member): ?>
             <div class="member-card">
-                <a href="/member.php?id=<?php echo $member['member_id']; ?>">
-                    <img src="/uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="<?php echo htmlspecialchars($member['full_name']); ?>">
+                <a href="member.php?id=<?php echo $member['member_id']; ?>">
+                    <img src="uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="<?php echo htmlspecialchars($member['full_name']); ?>">
                     <h3><?php echo htmlspecialchars($member['full_name']); ?></h3>
                     <p>@<?php echo htmlspecialchars($member['username']); ?></p>
                 </a>

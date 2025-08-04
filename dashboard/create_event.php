@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/header.php';
+require_once '..includes/db.php';
+require_once '..includes/header.php';
 redirect_if_not_logged_in();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

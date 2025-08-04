@@ -3,7 +3,7 @@ require_once 'includes/db.php';
 require_once 'includes/header.php';
 
 if (!isset($_GET['id'])) {
-    header('Location: /members.php');
+    header('Location: members.php');
     exit;
 }
 
@@ -15,7 +15,7 @@ $stmt->execute([$member_id]);
 $member = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$member) {
-    header('Location: /members.php');
+    header('Location:members.php');
     exit;
 }
 
@@ -33,7 +33,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <section class="member-profile">
     <div class="profile-header">
         <div class="profile-pic">
-            <img src="/uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="<?php echo htmlspecialchars($member['full_name']); ?>">
+            <img src="uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="<?php echo htmlspecialchars($member['full_name']); ?>">
         </div>
         <div class="profile-info">
             <h2><?php echo htmlspecialchars($member['full_name']); ?></h2>
@@ -65,8 +65,8 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="photo-grid">
                 <?php foreach ($photos as $photo): ?>
                     <div class="photo-item">
-                        <a href="/photo.php?id=<?php echo $photo['photo_id']; ?>">
-                            <img src="/uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
+                        <a href="photo.php?id=<?php echo $photo['photo_id']; ?>">
+                            <img src="uploads/<?php echo htmlspecialchars($photo['file_path']); ?>" alt="<?php echo htmlspecialchars($photo['title']); ?>">
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -87,7 +87,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <i class="fas fa-calendar"></i> <?php echo date('F j, Y', strtotime($event['event_date'])); ?>
                             <i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($event['location']); ?>
                         </p>
-                        <a href="/event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">View Event</a>
+                        <a href="event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">View Event</a>
                     </div>
                 <?php endforeach; ?>
             </div>
