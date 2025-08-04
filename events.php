@@ -69,7 +69,7 @@ $past_events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <i class="fas fa-calendar"></i> <?php echo date('F j, Y', strtotime($event['event_date'])); ?>
                         <i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($event['location']); ?>
                     </p>
-                    <a href="/event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">View Photos</a>
+                    <a href="event.php?id=<?php echo $event['event_id']; ?>" class="btn btn-outline">View Photos</a>
                 </div>
             <?php endforeach; ?>
         </div>

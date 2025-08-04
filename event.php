@@ -3,7 +3,7 @@ require_once 'includes/db.php';
 require_once 'includes/header.php';
 
 if (!isset($_GET['id'])) {
-    header('Location: /events.php');
+    header('Location: events.php');
     exit;
 }
 
@@ -15,7 +15,7 @@ $stmt->execute([$event_id]);
 $event = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$event) {
-    header('Location: /events.php');
+    header('Location: events.php');
     exit;
 }
 

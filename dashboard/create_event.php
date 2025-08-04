@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt = $pdo->prepare("INSERT INTO events (title, description, event_date, location, organizer_id) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$title, $description, $event_date, $location, $_SESSION['member_id']]);
-    header('Location: /events.php');
+    header('Location: events.php');
     exit;
 }
 ?>

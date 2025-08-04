@@ -20,7 +20,7 @@ $stmt->execute([$event_id]);
 $event = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$event) {
-    header('Location: /events.php');
+    header('Location: events.php');
     exit;
 }
 
@@ -35,6 +35,6 @@ if (!$is_registered) {
     $stmt->execute([$event_id, $_SESSION['member_id']]);
 }
 
-header("Location: /event.php?id=$event_id");
+header("Location: event.php?id=$event_id");
 exit;
 ?>

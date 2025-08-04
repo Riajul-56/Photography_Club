@@ -16,7 +16,7 @@ $photo = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($photo) {
     // Delete file
-    unlink("../uploads/" . $photo['file_path']);
+    unlink("..uploads/" . $photo['file_path']);
     
     // Delete from database
     $pdo->prepare("DELETE FROM photos WHERE photo_id = ?")->execute([$photo_id]);
