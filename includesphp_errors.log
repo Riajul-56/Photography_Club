@@ -1,0 +1,3 @@
+[04-Aug-2025 22:35:44 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\photography-club\includes\header.php on line 2
+[04-Aug-2025 22:35:44 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\photography-club\includes\header.php on line 2
+[04-Aug-2025 22:35:45 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\photography-club\includes\header.php on line 2

@@ -88,14 +88,17 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 80vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
+    position: relative;
 }
 
 .hero-content {

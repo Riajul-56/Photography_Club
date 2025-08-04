@@ -1,6 +1,6 @@
 <?php
-require_once '..includes/db.php';
-require_once '..includes/header.php';
+require_once 'includes/db.php';
+require_once 'includes/header.php';
 
 if (!isset($_SESSION['member_id']) || !isset($_GET['id'])) {
     header('Location: login.php');
