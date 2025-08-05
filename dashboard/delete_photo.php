@@ -1,9 +1,9 @@
 <?php
-require_once 'includes/db.php';
-require_once 'includes/header.php';
+require_once '../includes/db.php';
+require_once '../includes/header.php';
 
 if (!isset($_SESSION['member_id']) || !isset($_GET['id'])) {
-    header('Location: login.php');
+    header('Location: ../login.php');
     exit;
 }
 
@@ -16,12 +16,15 @@ $photo = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($photo) {
     // Delete file
-    unlink("..uploads/" . $photo['file_path']);
+    $file_path = '../uploads/' . $photo['file_path'];
+    if (file_exists($file_path)) {
+        unlink($file_path);
+    }
     
     // Delete from database
     $pdo->prepare("DELETE FROM photos WHERE photo_id = ?")->execute([$photo_id]);
 }
 
-header('Location: dashboard/');
+header('Location: ../dashboard/');
 exit;
 ?>

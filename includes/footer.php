@@ -9,9 +9,9 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="gallery.php">Gallery</a></li>
-                        <li><a href="events.php">Events</a></li>
+                        <li><a href="<?php echo $base_url; ?>index.php">Home</a></li>
+                        <li><a href="<?php echo $base_url; ?>gallery.php">Gallery</a></li>
+                        <li><a href="<?php echo $base_url; ?>events.php">Events</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -25,6 +25,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="<?php echo $base_url; ?>js/script.js"></script>
 </body>
 </html>

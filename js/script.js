@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Photo grid hover effect
   document.querySelectorAll(".photo-item").forEach((item) => {
     item.addEventListener("mouseenter", function () {
-      this.querySelector(".photo-info").style.transform = "translateY(0)";
+      const info = this.querySelector(".photo-info");
+      if (info) info.style.transform = "translateY(0)";
     });
     item.addEventListener("mouseleave", function () {
-      this.querySelector(".photo-info").style.transform = "translateY(100%)";
+      const info = this.querySelector(".photo-info");
+      if (info) info.style.transform = "translateY(100%)";
     });
   });
 

@@ -1,11 +1,7 @@
 <?php
-require_once 'includes/db.php';
-require_once 'includes/header.php';
-
-if (!isset($_SESSION['member_id'])) {
-    header('Location: login.php');
-    exit;
-}
+require_once '../includes/db.php';
+require_once '../includes/header.php';
+redirect_if_not_logged_in();
 
 // Get member info
 $stmt = $pdo->prepare("SELECT * FROM members WHERE member_id = ?");
@@ -26,17 +22,17 @@ $event_count = $stmt->fetchColumn();
 <div class="dashboard">
     <aside class="sidebar">
         <div class="profile-summary">
-            <img src="uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="Profile Picture">
+            <img src="<?php echo $base_url; ?>uploads/profiles/<?php echo htmlspecialchars($member['profile_pic']); ?>" alt="Profile Picture">
             <h3><?php echo htmlspecialchars($member['full_name']); ?></h3>
             <p>@<?php echo htmlspecialchars($member['username']); ?></p>
         </div>
         
         <nav class="dashboard-nav">
             <ul>
-                <li class="active"><a href="/dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                <li><a href="dashboard/upload.php"><i class="fas fa-upload"></i> Upload Photo</a></li>
-                <li><a href="dashboard/profile.php"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li class="active"><a href="<?php echo $base_url; ?>dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="<?php echo $base_url; ?>dashboard/upload.php"><i class="fas fa-upload"></i> Upload Photo</a></li>
+                <li><a href="<?php echo $base_url; ?>dashboard/profile.php"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="<?php echo $base_url; ?>logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </nav>
     </aside>
@@ -64,7 +60,7 @@ $event_count = $stmt->fetchColumn();
                 $stmt->execute([$_SESSION['member_id']]);
                 while ($photo = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div class="photo-item">';
-                    echo '<img src="uploads/' . htmlspecialchars($photo['file_path']) . '" alt="' . htmlspecialchars($photo['title']) . '">';
+                    echo '<img src="' . $base_url . 'uploads/' . htmlspecialchars($photo['file_path']) . '" alt="' . htmlspecialchars($photo['title']) . '">';
                     echo '<div class="photo-info">';
                     echo '<h4>' . htmlspecialchars($photo['title']) . '</h4>';
                     echo '</div>';
@@ -76,4 +72,4 @@ $event_count = $stmt->fetchColumn();
     </main>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

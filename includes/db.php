@@ -1,7 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 
 $host = 'localhost';
 $dbname = 'photography_club';
@@ -36,6 +34,27 @@ try {
             category VARCHAR(50),
             FOREIGN KEY (member_id) REFERENCES members(member_id)
         );
+        
+        CREATE TABLE IF NOT EXISTS events (
+            event_id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(100) NOT NULL,
+            description TEXT,
+            event_date DATE NOT NULL,
+            location VARCHAR(255) NOT NULL,
+            organizer_id INT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (organizer_id) REFERENCES members(member_id)
+        );
+        
+        CREATE TABLE IF NOT EXISTS event_participants (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            event_id INT NOT NULL,
+            member_id INT NOT NULL,
+            joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (event_id) REFERENCES events(event_id),
+            FOREIGN KEY (member_id) REFERENCES members(member_id),
+            UNIQUE KEY (event_id, member_id)
+        );
     ");
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());
@@ -52,4 +71,3 @@ function redirect_if_not_logged_in() {
         exit;
     }
 }
-?>
