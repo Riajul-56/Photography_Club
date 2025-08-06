@@ -1,4 +1,4 @@
-        </main>
+    </main>
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -17,7 +17,7 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>Email: contact@photographyclub.com</p>
-                    <p>Phone: (123) 456-7890</p>
+                    <p>Phone: +880 1837976474</p>
                 </div>
             </div>
             <div class="copyright">

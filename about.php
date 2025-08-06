@@ -40,12 +40,12 @@
                 <p>Workshop Coordinator</p>
             </div>
             <div class="team-member">
-                <img src="images/team3.jpg" alt="Team Member">
+                <img src="images/sadik.jpg" alt="Team Member">
                 <h4>Sadikul Islam</h4>
                 <p>Events Manager</p>
             </div>
             <div class="team-member">
-                <img src="images/team3.jpg" alt="Team Member">
+                <img src="images/injam.jpg" alt="Team Member">
                 <h4>Injamul Haque</h4>
                 <p>Photographer</p>
             </div>

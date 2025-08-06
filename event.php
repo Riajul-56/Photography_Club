@@ -52,7 +52,7 @@ if (isset($_SESSION['member_id'])) {
                 <?php if ($is_registered): ?>
                     <span class="btn btn-disabled">You're Registered</span>
                 <?php else: ?>
-                    <a href="/register_event.php?event_id=<?php echo $event_id; ?>" class="btn">Register for Event</a>
+                    <a href="register_event.php?event_id=<?php echo $event_id; ?>" class="btn">Register for Event</a>
                 <?php endif; ?>
                 
                 <?php if ($_SESSION['member_id'] == $event['organizer_id']): ?>

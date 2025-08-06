@@ -19,6 +19,7 @@
             echo '<img src="uploads/' . htmlspecialchars($photo['file_path']) . '" alt="' . htmlspecialchars($photo['title']) . '">';
             echo '<div class="photo-info">';
             echo '<h3>' . htmlspecialchars($photo['title']) . '</h3>';
+            echo '<p>By ' . htmlspecialchars($photo['author']) . '</p>';
             echo '</div>';
             echo '</div>';
         }

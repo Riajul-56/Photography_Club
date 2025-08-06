@@ -17,6 +17,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['S
             <div class="logo">
                 <h1>Photography Club</h1>
             </div>
+            <button class="mobile-menu-toggle">☰</button>
             <nav>
                 <ul>
                     <li><a href="<?php echo $base_url; ?>index.php">Home</a></li>
