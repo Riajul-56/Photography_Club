@@ -30,22 +30,22 @@
         <h3>Meet Our Team</h3>
         <div class="team-grid">
             <div class="team-member">
-                <img src="images/team1.jpg" alt="Team Member">
+                <img src="assets/images/team1.jpg" alt="Team Member">
                 <h4>Riajul Hasan</h4>
                 <p>Club President</p>
             </div>
             <div class="team-member">
-                <img src="images/team2.jpg" alt="Team Member">
+                <img src="assets/images/team2.jpg" alt="Team Member">
                 <h4>Arup Ratan Dey</h4>
                 <p>Workshop Coordinator</p>
             </div>
             <div class="team-member">
-                <img src="images/sadik.jpg" alt="Team Member">
+                <img src="assets/images/sadik.jpg" alt="Team Member">
                 <h4>Sadikul Islam</h4>
                 <p>Events Manager</p>
             </div>
             <div class="team-member">
-                <img src="images/injam.jpg" alt="Team Member">
+                <img src="assets/images/injam.jpg" alt="Team Member">
                 <h4>Injamul Haque</h4>
                 <p>Photographer</p>
             </div>

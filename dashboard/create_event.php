@@ -1,6 +1,6 @@
 <?php
-require_once 'includes/db.php';
-require_once 'includes/header.php';
+require_once '../includes/db.php';
+require_once '../includes/header.php';
 redirect_if_not_logged_in();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="dashboard">
     <aside class="sidebar">
-        <!-- Sidebar content -->
+        <?php include_once '../includes/sidebar.php'; ?>
     </aside>
-    
+
     <main class="dashboard-content">
         <h2>Create New Event</h2>
         <form method="POST">

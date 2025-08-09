@@ -2,6 +2,12 @@
 require_once 'includes/db.php';
 require_once 'includes/header.php';
 
+// Redirect if already logged in
+if (isset($_SESSION['member_id'])) {
+    header('Location: index.php');
+    exit;
+}
+
 $errors = [];
 $success = false;
 
@@ -41,16 +47,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->rowCount() > 0) {
         $errors[] = 'Username or email already exists';
     }
-    
+
+    // Process registration if no errors
     if (empty($errors)) {
-        // Hash password
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        // Insert into database
-        $stmt = $pdo->prepare("INSERT INTO members (username, password, email, full_name, join_date) VALUES (?, ?, ?, ?, CURDATE())");
-        $stmt->execute([$username, $hashed_password, $email, $full_name]);
-        
-        $success = true;
+        try {
+            // Hash password
+            $hashed_password = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
+
+            // Insert into database
+            $stmt = $pdo->prepare("INSERT INTO members 
+                                 (username, password, email, full_name, join_date, profile_pic) 
+                                 VALUES (?, ?, ?, ?, CURDATE(), ?)");
+
+            $default_profile_pic = 'default.jpg';
+            $stmt->execute([
+                $username,
+                $hashed_password,
+                $email,
+                $full_name,
+                $default_profile_pic
+            ]);
+
+            // YOUR SPECIFIC SUCCESS REDIRECT CODE
+            $success = true;
+            if ($success) {
+                $_SESSION['success'] = 'Registration successful! Please login.';
+                header('Location: login.php');
+                exit;
+            }
+        } catch (PDOException $e) {
+            error_log("Database error: " . $e->getMessage());
+            $errors[] = 'Registration failed. Please try again.';
+        }
     }
 }
 ?>

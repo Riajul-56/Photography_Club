@@ -11,17 +11,16 @@ try {
     
     // Create tables if they don't exist
     $pdo->exec("
-        CREATE TABLE IF NOT EXISTS members (
-            member_id INT AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(50) NOT NULL UNIQUE,
-            password VARCHAR(255) NOT NULL,
-            email VARCHAR(100) NOT NULL UNIQUE,
-            full_name VARCHAR(100) NOT NULL,
-            join_date DATE NOT NULL,
-            profile_pic VARCHAR(255) DEFAULT 'default.jpg',
-            bio TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        );
+         CREATE TABLE IF NOT EXISTS events (
+        event_id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(100) NOT NULL,
+        description TEXT,
+        event_date DATE NOT NULL,
+        location VARCHAR(100) NOT NULL,
+        organizer_id INT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (organizer_id) REFERENCES members(member_id)
+    );
         
         CREATE TABLE IF NOT EXISTS photos (
             photo_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -46,14 +45,21 @@ try {
         );
         
         CREATE TABLE IF NOT EXISTS event_participants (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            event_id INT NOT NULL,
-            member_id INT NOT NULL,
-            joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (event_id) REFERENCES events(event_id),
-            FOREIGN KEY (member_id) REFERENCES members(member_id),
-            UNIQUE KEY (event_id, member_id)
-        );
+        event_id INT NOT NULL,
+        member_id INT NOT NULL,
+        PRIMARY KEY (event_id, member_id),
+        FOREIGN KEY (event_id) REFERENCES events(event_id),
+        FOREIGN KEY (member_id) REFERENCES members(member_id)
+    );
+      CREATE TABLE IF NOT EXISTS event_photos (
+        event_id INT NOT NULL,
+        photo_id INT NOT NULL,
+        PRIMARY KEY (event_id, photo_id),
+        FOREIGN KEY (event_id) REFERENCES events(event_id),
+        FOREIGN KEY (photo_id) REFERENCES photos(photo_id)
+    );
+
+
     ");
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());
@@ -64,7 +70,8 @@ function is_logged_in() {
     return isset($_SESSION['member_id']);
 }
 
-function redirect_if_not_logged_in() {
+function redirect_if_not_logged_in()
+{
     if (!is_logged_in()) {
         header('Location: login.php');
         exit;

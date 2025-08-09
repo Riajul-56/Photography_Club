@@ -8,7 +8,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['S
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Club</title>
-    <link rel="stylesheet" href="<?php echo $base_url; ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -17,7 +17,7 @@ $base_url = 'http://' . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['S
             <div class="logo">
                 <h1>Photography Club</h1>
             </div>
-            <button class="mobile-menu-toggle">☰</button>
+            <!-- <button class="mobile-menu-toggle">☰</button> -->
             <nav>
                 <ul>
                     <li><a href="<?php echo $base_url; ?>index.php">Home</a></li>

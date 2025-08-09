@@ -1,7 +1,11 @@
 <?php
 require_once '../includes/db.php';
 require_once '../includes/header.php';
-redirect_if_not_logged_in();
+
+if (!isset($_SESSION['member_id'])) {
+    header('Location: ../login.php');
+    exit;
+}
 
 $errors = [];
 $success = false;
@@ -31,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         if (empty($errors)) {
-            $upload_dir = '../uploads/';
+            $upload_dir = '../uploads/photos/';
             if (!is_dir($upload_dir)) {
                 mkdir($upload_dir, 0755, true);
             }
@@ -46,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['member_id'],
                     $title,
                     $description,
-                    $file_name,
+                    'photos/' . $file_name, // Store relative path
                     $category
                 ]);
                 
