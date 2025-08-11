@@ -1,5 +1,5 @@
 # Photography Club Project
-- ![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Register.png)
+- ![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Home.png)
 
 ## Group Details:
 - **Group Name**: Output
@@ -53,13 +53,13 @@ The **Photography Club** project is a web-based platform designed for photograph
    - Ability to upload photos with validation on file type and size.
    - Photo categorization (e.g., nature, street, portrait) and editing of photo details.
    - Option to delete photos.
-   - ![Photo Management](images/photo-management.png)
+   - ![Photo Management](https://github.com/Riajul-56/Photography_Club/blob/main/Upload.png)
 
 ### **3. Event Management**:
    - Users can view upcoming events and participate in them.
    - Event details page showing participants and uploaded event photos.
    - Event registration system to allow users to register for events.
-   - ![Event Management](images/event-management.png)
+   - ![Event Management](https://github.com/Riajul-56/Photography_Club/blob/main/Event.png)
 
 ### **4. Photo Gallery**:
    - Search functionality to filter photos based on title or description.
