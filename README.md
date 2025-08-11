@@ -1,4 +1,5 @@
 # Photography Club Project
+- ![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Register.png)
 
 ## Group Details:
 - **Group Name**: Output
