@@ -1,0 +1,54 @@
+# Photography Club Project
+
+## Group Details:
+- **Group Name**: Output
+- **Group Number**: 5
+
+## Project Description:
+The **Photography Club** is a web-based platform that allows photographers to share their work, participate in events, and engage with a community of like-minded individuals. Users can upload, edit, and delete photos, as well as categorize them (e.g., nature, street, portrait). Users can also join events, participate in photo challenges, and explore galleries.
+
+---
+
+## Team Members and Individual Contributions:
+
+### 1. **Riajul Hasan**
+   - **Contributions**:
+     
+     - Backend PHP development, handling photo uploads and validation.
+     - Managed database interactions for photos, users, and events.
+     - Implemented the event registration and participant management systems.
+
+### 2. **Arup Ratan Dey**
+   - **Contributions**:
+     - Front-end design and layout implementation.
+     - Styled navigation bar, hero section, and footer using CSS.
+     - Developed responsive design and mobile menu.
+     - Created dashboard and user profile features.
+  
+### 3. **Mohammad Injamamul Haque**
+   - **Contributions**:
+     - Developed photo grid, masonry layout, and event details pages.
+     - Integrated JavaScript for interactive elements (e.g., hover effects).
+     - Worked on user registration, login, and photo stats on the dashboard.
+
+### 4. **Mohammad Sadikul Islam**
+   - **Contributions**:
+     - Styled event pages, photo details, and the "About Us" section.
+     - Developed the search functionality and category filters for the gallery.
+     - Contributed to the design of the team section and event participant sections.
+
+---
+
+## Technologies Used:
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP
+- **Database**: MySQL (PDO)
+- **Version Control**: Git
+
+---
+
+## How to Run the Project:
+
+### 1. Clone the repository:
+```bash
+git clone [repository-link]
