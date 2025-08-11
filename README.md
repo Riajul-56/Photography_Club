@@ -73,7 +73,7 @@ The **Photography Club** project is a web-based platform designed for photograph
 
 ### **6. Responsive Design**:
    - Mobile-friendly design for seamless access on various screen sizes.
-   - ![Responsive Design](images/responsive-design.png)
+   - ![Responsive Design](https://github.com/Riajul-56/Photography_Club/blob/main/Responsive.png)
 
 ---
 
