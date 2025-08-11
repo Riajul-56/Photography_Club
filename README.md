@@ -69,7 +69,7 @@ The **Photography Club** project is a web-based platform designed for photograph
 ### **5. Dashboard**:
    - User dashboard displaying their uploaded photos and events they have participated in.
    - Stats section showing the number of photos uploaded and events attended.
-   - ![Dashboard](images/dashboard.png)
+   - ![Dashboard](https://github.com/Riajul-56/Photography_Club/blob/main/Dashboard.png)
 
 ### **6. Responsive Design**:
    - Mobile-friendly design for seamless access on various screen sizes.
