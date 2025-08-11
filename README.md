@@ -46,7 +46,7 @@ The **Photography Club** project is a web-based platform designed for photograph
 ### **1. User Authentication**:
    - Login and registration functionality to allow users to access the platform.
    - User profile with the ability to upload and edit a profile picture.
-   - ![User Authentication](images/user-authentication.png)
+   - ![User Authentication](images/Register.png)
 
 ### **2. Photo Management**:
    - Ability to upload photos with validation on file type and size.

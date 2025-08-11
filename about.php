@@ -30,7 +30,7 @@
         <p>Club President</p>
       </div>
       <div class="team-member">
-        <img src="assets/images/team2.jpg" alt="Team Member">
+        <img src="assets/images/arup.jpg" alt="Team Member">
         <h4>Arup Ratan Dey</h4>
         <p>Workshop Coordinator</p>
       </div>

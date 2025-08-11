@@ -429,11 +429,16 @@ copyright {
 }
 
 .team-member img {
-  width: 100%;  /* Ensures the image takes up full width of the container */
-  height: 200px;  /* Fixed height for uniformity */
-  object-fit: cover;  /* Ensure the images do not stretch */
-  border-radius: 50%;  /* Round the images */
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  margin-top: 20px;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
 }
 
 .team-member h4 {
