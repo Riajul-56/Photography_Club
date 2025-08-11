@@ -14,7 +14,7 @@
      - Styled the navigation bar, hero section, and footer using CSS.
      - Worked on responsive design and mobile menu.
      - Developed the dashboard and user profile features.
-  
+
 ### 2. **Arup Ratan Dey**
    - **Contributions**:
      - Backend PHP development for handling photo uploads and validation.
@@ -46,27 +46,33 @@ The **Photography Club** project is a web-based platform designed for photograph
 1. **User Authentication:**
    - Login and registration functionality to allow users to access the platform.
    - User profile with the ability to upload and edit a profile picture.
+   - ![User Authentication](images/user-authentication.png)
 
 2. **Photo Management:**
    - Ability to upload photos with validation on file type and size.
    - Photo categorization (e.g., nature, street, portrait) and editing of photo details.
    - Option to delete photos.
+   - ![Photo Management](images/photo-management.png)
 
 3. **Event Management:**
    - Users can view upcoming events and participate in them.
    - Event details page showing participants and uploaded event photos.
    - Event registration system to allow users to register for events.
+   - ![Event Management](images/event-management.png)
 
 4. **Photo Gallery:**
    - Search functionality to filter photos based on title or description.
    - Category filters for easy navigation of photos by type (nature, portrait, etc.).
+   - ![Photo Gallery](images/photo-gallery.png)
 
 5. **Dashboard:**
    - User dashboard displaying their uploaded photos and events they have participated in.
    - Stats section showing the number of photos uploaded and events attended.
+   - ![Dashboard](images/dashboard.png)
 
 6. **Responsive Design:**
    - Mobile-friendly design for seamless access on various screen sizes.
+   - ![Responsive Design](images/responsive-design.png)
 
 ---
 
