@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /photography_club/
+
+# Redirect index.php requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Optionally, redirect non-www to www (optional step)
+RewriteCond %{HTTP_HOST} ^yourdomain\.com [NC]
+RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [L,R=301]
