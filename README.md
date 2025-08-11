@@ -64,7 +64,7 @@ The **Photography Club** project is a web-based platform designed for photograph
 ### **4. Photo Gallery**:
    - Search functionality to filter photos based on title or description.
    - Category filters for easy navigation of photos by type (nature, portrait, etc.).
-   - ![Photo Gallery](images/photo-gallery.png)
+   - ![Photo Gallery](https://github.com/Riajul-56/Photography_Club/blob/main/Gallary.png)
 
 ### **5. Dashboard**:
    - User dashboard displaying their uploaded photos and events they have participated in.
