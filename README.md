@@ -1,6 +1,6 @@
 # Photography Club Project
 
-- ![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Home.png)
+![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Home.png)
 
 ## Group Details:
 
@@ -48,42 +48,44 @@ The **Photography Club** project is a web-based platform designed for photograph
 
 ## **Functionalities Implemented**:
 
+### **ER Diagram.**
+
 ### **1. User Authentication**:
 
 - Login and registration functionality to allow users to access the platform.
 - User profile with the ability to upload and edit a profile picture.
-- ![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Register.png)
+![User Authentication](https://github.com/Riajul-56/Photography_Club/blob/main/Register.png)
 
 ### **2. Photo Management**:
 
 - Ability to upload photos with validation on file type and size.
 - Photo categorization (e.g., nature, street, portrait) and editing of photo details.
 - Option to delete photos.
-- ![Photo Management](https://github.com/Riajul-56/Photography_Club/blob/main/Upload.png)
+![Photo Management](https://github.com/Riajul-56/Photography_Club/blob/main/Upload.png)
 
 ### **3. Event Management**:
 
 - Users can view upcoming events and participate in them.
 - Event details page showing participants and uploaded event photos.
 - Event registration system to allow users to register for events.
-- ![Event Management](https://github.com/Riajul-56/Photography_Club/blob/main/Event.png)
+![Event Management](https://github.com/Riajul-56/Photography_Club/blob/main/Event.png)
 
 ### **4. Photo Gallery**:
 
 - Search functionality to filter photos based on title or description.
 - Category filters for easy navigation of photos by type (nature, portrait, etc.).
-- ![Photo Gallery](https://github.com/Riajul-56/Photography_Club/blob/main/Gallary.png)
+ ![Photo Gallery](https://github.com/Riajul-56/Photography_Club/blob/main/Gallary.png)
 
 ### **5. Dashboard**:
 
 - User dashboard displaying their uploaded photos and events they have participated in.
 - Stats section showing the number of photos uploaded and events attended.
-- ![Dashboard](https://github.com/Riajul-56/Photography_Club/blob/main/Dashboard.png)
+![Dashboard](https://github.com/Riajul-56/Photography_Club/blob/main/Dashboard.png)
 
 ### **6. Responsive Design**:
 
 - Mobile-friendly design for seamless access on various screen sizes.
-- ![Responsive Design](https://github.com/Riajul-56/Photography_Club/blob/main/Responsive.png)
+![Responsive Design](https://github.com/Riajul-56/Photography_Club/blob/main/Responsive.png)
 
 ---
 
