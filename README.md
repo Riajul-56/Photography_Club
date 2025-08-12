@@ -49,7 +49,7 @@ The **Photography Club** project is a web-based platform designed for photograph
 ## **Functionalities Implemented**:
 
 ### **ER Diagram.**
-![ER Diagram](https://github.com/Riajul-56/Photography_Club/blob/main/ER.jpg)
+![ER Diagram](https://github.com/Riajul-56/Photography_Club/blob/main/ER%20Diagram.jpg)
 
 ### **1. User Authentication**:
 
