@@ -11,7 +11,7 @@ $stmt->execute([$photo_id, $_SESSION['member_id']]);
 $photo = $stmt->fetch();
 
 if ($photo) {
-  $abs = __DIR__ . '/../uploads/' . $photo['file_path']; // file_path like 'photos/filename.jpg'
+  $abs = __DIR__ . '/../uploads/' . $photo['photos/file_path.jpg']; // file_path like 'photos/filename.jpg'
   if (is_file($abs)) { @unlink($abs); }
   $pdo->prepare("DELETE FROM photos WHERE photo_id = ?")->execute([$photo_id]);
 }
