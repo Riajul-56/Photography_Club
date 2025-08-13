@@ -8,7 +8,7 @@ $DB_PASS = '';
 $DB_CHARSET = 'utf8mb4';
 
 try {
-    $dsn = "mysql:host={$DB_HOST};dbname={$DB_NAME};charset={$DB_CHARSET}"; //কানেকশন স্ট্রিং হলো ডাটাবেসে সংযোগ স্থাপন করতে ব্যবহৃত একটি স্ট্রিং
+    $dsn = "mysql:host={$DB_HOST};dbname={$DB_NAME};charset={$DB_CHARSET}"; 
     
     $pdo = new PDO($dsn, $DB_USER, $DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
