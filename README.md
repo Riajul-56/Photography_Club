@@ -11,28 +11,28 @@
 
 ## Team Members and Individual Contributions:
 
-### **1. Riajul Hasan**
+### **1. Riajul Hasan 221-115-112**
 
 - **Contributions**:
   - Managed the backend development for the project, including PHP code for handling photo uploads, event registration, and user authentication.
   - Worked on database interactions for managing photos, users, and events.
   - Developed the backend logic for photo categorization, validation, and event participation.
 
-### **2. Arup Ratan Dey**
+### **2. Arup Ratan Dey 231-115-013**
 
 - **Contributions**:
   - Focused on the backend PHP development, specifically for handling photo uploads and validation.
   - Managed user registration and login functionality on the backend.
   - Developed and maintained the backend systems for event registration and participant management.
 
-### **3. Mohammad Injamul Haque**
+### **3. Mohammad Injamul Haque 231-115-019**
 
 - **Contributions**:
   - Focused on the frontend design, primarily working on HTML, CSS, and JavaScript to create the layout and style.
   - Developed the interactive elements such as hover effects, animations, and event details.
   - Contributed to designing the photo grid, masonry layout, and event pages.
 
-### **4. Mohammad Sadikul Islam**
+### **4. Mohammad Sadikul Islam 231-115-017**
 
 - **Contributions**:
   - Worked mainly on the database design and management, including MySQL queries and the PDO database connection.
