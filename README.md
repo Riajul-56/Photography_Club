@@ -37,6 +37,7 @@
 - **Contributions**:
   - Worked mainly on the database design and management, including MySQL queries and the PDO database connection.
   - Contributed to the implementation of search functionality and category filters for the photo gallery.
+  - Worked in ER Diagram.
 
 ---
 
